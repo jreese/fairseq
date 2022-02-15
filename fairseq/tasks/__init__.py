@@ -8,9 +8,10 @@ import argparse
 import importlib
 import os
 
+from hydra.core.config_store import ConfigStore
+
 from fairseq.dataclass import FairseqDataclass
 from fairseq.dataclass.utils import merge_with_parent
-from hydra.core.config_store import ConfigStore
 
 from .fairseq_task import FairseqTask, LegacyFairseqTask  # noqa
 

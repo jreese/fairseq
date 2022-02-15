@@ -6,8 +6,8 @@
 
 from .multihead_attention import ModelParallelMultiheadAttention
 from .transformer_layer import (
-    ModelParallelTransformerEncoderLayer,
     ModelParallelTransformerDecoderLayer,
+    ModelParallelTransformerEncoderLayer,
 )
 
 __all__ = [

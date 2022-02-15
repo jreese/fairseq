@@ -10,10 +10,11 @@ import os
 
 from contextlib import ExitStack
 
+from hydra.core.config_store import ConfigStore
+from omegaconf import OmegaConf, open_dict
+
 from fairseq.dataclass import FairseqDataclass
 from fairseq.dataclass.utils import merge_with_parent
-from hydra.core.config_store import ConfigStore
-from omegaconf import open_dict, OmegaConf
 
 from .composite_encoder import CompositeEncoder
 from .distributed_fairseq_model import DistributedFairseqModel

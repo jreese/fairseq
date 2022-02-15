@@ -7,12 +7,13 @@
 import importlib
 import os
 
+from omegaconf import DictConfig
+
 from fairseq import registry
 from fairseq.criterions.fairseq_criterion import (  # noqa
     FairseqCriterion,
     LegacyFairseqCriterion,
 )
-from omegaconf import DictConfig
 
 
 (

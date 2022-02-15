@@ -7,12 +7,13 @@
 import importlib
 import os
 
+from omegaconf import DictConfig
+
 from fairseq import registry
 from fairseq.optim.lr_scheduler.fairseq_lr_scheduler import (  # noqa
     FairseqLRScheduler,
     LegacyFairseqLRScheduler,
 )
-from omegaconf import DictConfig
 
 
 (

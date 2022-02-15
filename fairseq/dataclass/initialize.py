@@ -5,9 +5,11 @@
 
 
 import logging
+
 from hydra.core.config_store import ConfigStore
-from fairseq.dataclass.configs import FairseqConfig
 from omegaconf import DictConfig, OmegaConf
+
+from fairseq.dataclass.configs import FairseqConfig
 
 
 logger = logging.getLogger(__name__)
@@ -30,11 +32,12 @@ def hydra_init(cfg_name="config") -> None:
 def add_defaults(cfg: DictConfig) -> None:
     """This function adds default values that are stored in dataclasses that hydra doesn't know about"""
 
+    from typing import Any
+
+    from fairseq.dataclass.utils import merge_with_parent
+    from fairseq.models import ARCH_MODEL_NAME_REGISTRY, MODEL_DATACLASS_REGISTRY
     from fairseq.registry import REGISTRIES
     from fairseq.tasks import TASK_DATACLASS_REGISTRY
-    from fairseq.models import ARCH_MODEL_NAME_REGISTRY, MODEL_DATACLASS_REGISTRY
-    from fairseq.dataclass.utils import merge_with_parent
-    from typing import Any
 
     OmegaConf.set_struct(cfg, False)
 

@@ -30,8 +30,10 @@ from fairseq.dataclass.initialize import hydra_init
 
 hydra_init()
 
+import fairseq.benchmark  # noqa
 import fairseq.criterions  # noqa
 import fairseq.distributed  # noqa
+import fairseq.model_parallel  # noqa
 import fairseq.models  # noqa
 import fairseq.modules  # noqa
 import fairseq.optim  # noqa
@@ -40,6 +42,3 @@ import fairseq.pdb  # noqa
 import fairseq.scoring  # noqa
 import fairseq.tasks  # noqa
 import fairseq.token_generation_constraints  # noqa
-
-import fairseq.benchmark  # noqa
-import fairseq.model_parallel  # noqa
